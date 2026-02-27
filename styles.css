@@ -25,6 +25,7 @@ body {
   min-height: 100vh;
   font-family: "DM Sans", "Segoe UI", sans-serif;
   color: var(--text);
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 10% 10%, rgba(58, 109, 174, 0.45), transparent 30%),
     radial-gradient(circle at 85% 20%, rgba(255, 207, 99, 0.22), transparent 28%),
@@ -253,7 +254,7 @@ h1 {
   border: 5px solid transparent;
   background:
     linear-gradient(160deg, var(--yellow-card-1), var(--yellow-card-2)) padding-box,
-    linear-gradient(120deg, #ffb703, #00e5ff, #ff3d81, #5cff76, #ffb703) border-box;
+    linear-gradient(120deg, #ff0000, #0047d4, #e50050, #d6b615, #ffb909) border-box;
   background-size: 100% 100%, 260% 260%;
   color: var(--yellow-text);
   box-shadow: 0 16px 30px rgba(11, 23, 42, 0.18);
@@ -631,6 +632,11 @@ h1 {
     flex-wrap: wrap;
   }
 
+  .brand,
+  .nav-call-wrap {
+    min-width: 0;
+  }
+
   .nav-call-wrap {
     width: 100%;
     flex: 1;
@@ -659,6 +665,11 @@ h1 {
     display: none;
   }
 
+  .call-menu {
+    min-width: min(220px, 92vw);
+    right: 0;
+  }
+
   .call-toggle {
     padding: 0 0.8rem;
     font-size: 1rem;
@@ -673,5 +684,92 @@ h1 {
 
   .quick-items {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    font-size: 85%;
+  }
+
+  .nav-inner,
+  .page {
+    width: min(1000px, 96vw);
+  }
+
+  .nav-inner {
+    gap: 0.45rem;
+    padding: 0.5rem 0;
+  }
+
+  .logo-wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-call-wrap {
+    min-width: 0;
+  }
+
+  .call-toggle {
+    min-height: 46px;
+    padding: 0 0.62rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-call {
+    min-height: 46px;
+    min-width: 0;
+    padding: 0.64rem 0.62rem;
+    font-size: 0.92rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .call-menu {
+    min-width: min(200px, 90vw);
+  }
+
+  .hero {
+    padding: 0.95rem;
+    border-radius: 16px;
+  }
+
+  .promo-carousel {
+    min-height: 124px;
+  }
+
+  .promo-slide {
+    padding: 0.75rem;
+    border-radius: 14px;
+    border-width: 4px;
+  }
+
+  .menu,
+  .item-detail-page {
+    padding: 0.65rem;
+    border-radius: 15px;
+  }
+
+  .menu-card-copy {
+    padding: 0.55rem;
+  }
+
+  .item-detail-card {
+    padding: 0.65rem;
+  }
+
+  .item-detail-card h1 {
+    font-size: clamp(1.3rem, 7.2vw, 1.7rem);
+  }
+
+  .detail-cta-row {
+    gap: 0.4rem;
+    padding-top: 0.65rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.5rem 0.72rem;
   }
 }
