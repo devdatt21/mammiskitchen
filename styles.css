@@ -566,6 +566,10 @@ h1 {
   flex-wrap: wrap;
 }
 
+.detail-cta-row .btn-primary {
+  width: 100%;
+}
+
 .btn-primary,
 .btn-secondary {
   text-decoration: none;
