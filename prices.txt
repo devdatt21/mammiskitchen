@@ -1,0 +1,4 @@
+dhokla : 0.31 per gram
+locho : 0.45 per gram
+thepla : 0.60 per gram
+idada : 0.40 per gram
