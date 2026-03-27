@@ -158,6 +158,16 @@
 
       const params = new URLSearchParams(window.location.search);
       const itemKey = params.get("item") || "budget-thali";
+      const itemSlugMap = {
+        "budget-thali": "budget-thali",
+        "full-meal-thali": "full-meal-thali",
+        dhokla: "dhokla",
+        idli: "idli",
+        locho: "locho",
+        thepla: "thepla"
+      };
+      const slugPath = itemSlugMap[itemKey] || "budget-thali";
+      const seoUrl = `${window.location.origin}/${slugPath}/`;
       const data = itemData[itemKey] || itemData["budget-thali"];
 
       const titleEl = document.getElementById("item-title");
@@ -192,7 +202,7 @@
 
       if (ogTitle) ogTitle.setAttribute("content", `${data.title} | Mammi's Kitchen`);
       if (ogDescription) ogDescription.setAttribute("content", data.description);
-      if (ogUrl) ogUrl.setAttribute("content", window.location.href);
+      if (ogUrl) ogUrl.setAttribute("content", seoUrl);
       if (ogImage && data.image) ogImage.setAttribute("content", data.image);
       if (twitterTitle) twitterTitle.setAttribute("content", `${data.title} | Mammi's Kitchen`);
       if (twitterDescription) twitterDescription.setAttribute("content", data.description);
@@ -213,6 +223,10 @@
             }
           : undefined
       };
+
+      if (canonicalEl) {
+        canonicalEl.href = seoUrl;
+      }
 
       const jsonLdEl = document.createElement("script");
       jsonLdEl.type = "application/ld+json";

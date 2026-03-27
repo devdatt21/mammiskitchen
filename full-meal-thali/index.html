@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Meal Thali in Surat | Mammi's Kitchen</title>
+    <meta
+      name="description"
+      content="Order Full Meal Thali in Surat from Mammi's Kitchen. Complete home-style thali with multiple sabzi, dal, rice, sweet, salad, papad, and chhas."
+    />
+    <meta name="keywords" content="full meal thali surat, premium thali surat, family thali surat, home thali delivery surat" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full Meal Thali in Surat | Mammi's Kitchen" />
+    <meta property="og:description" content="Complete Full Meal Thali in Surat for lunch or dinner. Call Mammi's Kitchen to order." />
+    <meta property="og:url" content="full-meal-thali/" />
+    <meta property="og:image" content="../full_meal_thali.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Full Meal Thali in Surat | Mammi's Kitchen" />
+    <meta name="twitter:description" content="Fresh Full Meal Thali delivery in Surat from Mammi's Kitchen." />
+    <meta name="twitter:image" content="../full_meal_thali.png" />
+    <link rel="canonical" href="full-meal-thali/" />
+
+    <link rel="icon" type="image/png" href="../mammiskitchennobg.png" />
+    <link rel="apple-touch-icon" href="../mammiskitchennobg.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MenuItem",
+        "name": "Full Meal Thali",
+        "description": "Complete home-style thali in Surat.",
+        "image": "../full_meal_thali.png",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": "249"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="top-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="brand" href="../index.html" aria-label="Mammi's Kitchen Home">
+          <span class="logo-wrap">
+            <img src="../mammiskitchennobg.png" alt="Mammi's Kitchen logo" />
+          </span>
+          <span class="brand-copy">
+            <strong>Mammi's Kitchen</strong>
+            <small>Cloud Kitchen In Surat</small>
+          </span>
+        </a>
+        <div class="nav-call-wrap" aria-label="Call options">
+          <a class="nav-call" href="tel:+919016177305">Call Now: +91 90161 77305</a>
+          <details class="call-dropdown">
+            <summary class="call-toggle" aria-label="More call options">▾</summary>
+            <div class="call-menu" role="menu">
+              <a role="menuitem" href="tel:+919106663804">Call: +91 91066 63804</a>
+              <a role="menuitem" href="tel:+919375479114">Call: +91 93754 79114</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-actions"><a class="btn-secondary" href="../index.html">Back to Menu</a></div>
+      <section class="item-detail-page" aria-label="Full meal thali details">
+        <div class="item-detail-grid">
+          <div class="item-image-wrap"><img src="../full_meal_thali.png" alt="Full meal thali from Mammi's Kitchen" /></div>
+          <article class="item-detail-card">
+            <p class="item-badge">Premium Thali</p>
+            <h1>Full Meal Thali</h1>
+            <p class="item-description">Complete family-style thali for a fuller, satisfying lunch or dinner.</p>
+            <p class="item-price">Rs 249</p>
+            <h2>Includes</h2>
+            <ul class="item-includes">
+              <li>7 rotli</li>
+              <li>2 sabzi</li>
+              <li>dal</li>
+              <li>rice</li>
+              <li>sweet</li>
+              <li>salad</li>
+              <li>papad</li>
+              <li>chhas</li>
+            </ul>
+            <div class="detail-cta-row"><a class="btn-primary" href="tel:+919016177305">Call to Order</a></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("click", (event) => {
+        const openDropdowns = document.querySelectorAll(".call-dropdown[open]");
+        if (!openDropdowns.length) {
+          return;
+        }
+        openDropdowns.forEach((dropdown) => {
+          if (!dropdown.contains(event.target)) {
+            dropdown.removeAttribute("open");
+          }
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") {
+          return;
+        }
+        document.querySelectorAll(".call-dropdown[open]").forEach((dropdown) => {
+          dropdown.removeAttribute("open");
+        });
+      });
+    </script>
+  </body>
+</html>
