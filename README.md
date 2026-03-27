@@ -10,4 +10,11 @@ Open `index.html` directly in a browser.
 
 - Update the phone number in `index.html`.
 - Adjust theme/colors in `styles.css`.
+
+## SEO Pages
+
+- `tiffin-service-in-surat/index.html`
+- `home-food-delivery-surat/index.html`
+
+These pages target location-specific keywords and are internally linked from the homepage.
 # mammiskitchen
